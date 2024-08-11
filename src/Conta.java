@@ -5,6 +5,16 @@ public class Conta {
     private Cliente titular; //Usando Referencia ao declarar que titular é um cliente
     private double saldo;
 
+    public Conta(){
+
+    }
+
+    public Conta(int agencia, int numero, Cliente titular){
+        this.agencia = agencia;
+        this.numero = numero;
+        this.titular = titular;
+    }
+
     void depositar(double valor) { // Método de Classe, Void especifica que nao ha retorno
         this.saldo += valor;
     }

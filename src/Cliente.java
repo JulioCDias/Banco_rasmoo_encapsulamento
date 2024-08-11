@@ -4,6 +4,15 @@ public class Cliente {
     private String profissao;
     private double salario;
 
+    public Cliente(){
+
+    }
+
+    public Cliente(String nome, String cpf){
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
     public String getNome() {
         return nome;
     }
