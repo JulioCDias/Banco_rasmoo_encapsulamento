@@ -4,6 +4,7 @@ public class Conta {
     private int numero;
     private Cliente titular; //Usando Referencia ao declarar que titular é um cliente
     private double saldo;
+    private static int totalDeContas; // O static informa que o tributo pertence a Classe nao ao objeto
 
     public Conta(){
 
@@ -13,6 +14,8 @@ public class Conta {
         this.agencia = agencia;
         this.numero = numero;
         this.titular = titular;
+
+        Conta.totalDeContas++;
     }
 
     void depositar(double valor) { // Método de Classe, Void especifica que nao ha retorno
@@ -66,6 +69,10 @@ public class Conta {
 
     public void setTitular(Cliente titular) {
         this.titular = titular;
+    }
+
+    public static int getTotalDeContas() {
+        return totalDeContas;
     }
 }
 
